@@ -1,9 +1,16 @@
+.preview {
+  margin-bottom: 1.5rem;
+  padding: 0.5em;
+  border: 1px solid #2e2e2e;
+  border-radius: 10px;
+}
 .card {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 6px rgb(48, 4, 97);
   .editor {
     display: block;
+    width: 100%;
     min-height: 160px;
     border: none;
     outline: none;
