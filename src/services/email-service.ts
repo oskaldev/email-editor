@@ -1,5 +1,6 @@
+import { IEmail } from '../types/email'
 import axios from 'axios'
-import { IEmail } from '../pages/home/type'
+
 
 class EmailService {
   private URL = 'http://localhost:3000/emails'

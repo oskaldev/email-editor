@@ -1,8 +1,8 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import './index.css';
-import { Home } from './pages/home/Home.tsx';
-import { Provider } from './Provider.tsx';
+import '@styles/index.css';
+import { Provider } from '@providers/Provider.tsx';
+import { Home } from '@home/Home.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
