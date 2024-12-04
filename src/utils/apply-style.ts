@@ -1,9 +1,7 @@
 export type TStyle = 'bold' | 'italic' | 'underline'
 
 export const applyStyle = (type: TStyle, selectedText: string) => {
-
   let formattedText = selectedText
-
   switch (type) {
     case 'bold':
       formattedText = '<b>' + selectedText + '</b>'
@@ -16,6 +14,7 @@ export const applyStyle = (type: TStyle, selectedText: string) => {
       break
     default:
       formattedText = selectedText
+      break
   }
   return formattedText
 }

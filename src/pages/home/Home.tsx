@@ -1,17 +1,28 @@
+// src/pages/home/Home.tsx
+import { FC } from 'react';
+import { Link } from 'react-router-dom';
 
-import { EmailEditor } from '@components/email-editor'
-import EmailList from '@components/email-list/EmailList'
-
-export const Home = () => {
+const Home: FC = () => {
   return (
-    <div
-      style={{
-        display: 'grid',
-        gridTemplateColumns: '1fr .6fr',
-        padding: '1.5rem',
-      }}>
-      <EmailEditor />
-      <EmailList />
+    <div style={{ padding: '16px' }}>
+      <h1>Welcome to the Email Editor</h1>
+      <p>This is the home page where you can start creating your emails.</p>
+      <Link
+        to='email-editor'
+        style={{
+          display: 'inline-block',
+          backgroundColor: '#007bff',
+          color: '#fff',
+          padding: '8px 16px',
+          borderRadius: '4px',
+          textDecoration: 'none',
+          fontWeight: 'bold',
+          transition: 'background-color 0.3s ease',
+        }}>
+        Go to Email Editor
+      </Link>
     </div>
   );
 };
+
+export default Home;

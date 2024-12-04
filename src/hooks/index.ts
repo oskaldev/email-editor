@@ -1,2 +1,1 @@
-export * from './email/useEmailEditor'
-export * from './list/useEmailList'
+export { useEmailList } from './list-hooks/useEmailList'

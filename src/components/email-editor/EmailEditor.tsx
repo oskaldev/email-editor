@@ -1,27 +1,34 @@
-import { useEmailEditor } from '@hooks/index';
+import { FC } from 'react';
 import styles from './EmailEditor.module.scss';
-import { FormattingTools, SendButton, TextEditor, TextPreview } from './components';
+import { useEmailEditor } from '@hooks/email-hooks/useEmailEditor';
+import { FormattingTools, Preview, SendButton, TextEditor } from './components'
 
-export function EmailEditor() {
-  const { text, setText, textRef, isPending, mutate, updateSelection, applyFormat } =
+const EmailEditor: FC = () => {
+  const { text, setText, handleTextSelect, handleStyle, handleFocus, handleSend, selectedText } =
     useEmailEditor();
-
   return (
     <div>
       <h1>Email editor</h1>
-      <TextPreview text={text} />
+      <Preview text={text} />
       <div className={styles.card}>
         <TextEditor
           text={text}
           setText={setText}
-          textRef={textRef}
-          updateSelection={updateSelection}
+          handleTextSelect={handleTextSelect}
+          handleFocus={handleFocus}
         />
+
         <div className={styles.actions}>
-          <FormattingTools onClear={() => setText('')} onApplyFormat={applyFormat} />
-          <SendButton isPending={isPending} onSend={mutate} />
+          <FormattingTools
+            onClear={() => setText('')}
+            onApplyStyle={handleStyle}
+            selectedText={selectedText}
+          />
+          <SendButton onSend={handleSend} />
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default EmailEditor;

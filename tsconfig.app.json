@@ -53,6 +53,9 @@
       "@providers/*": [
         "src/providers/*"
       ],
+      "@routes/*": [
+        "src/routes/*"
+      ]
     }
   },
   "include": [

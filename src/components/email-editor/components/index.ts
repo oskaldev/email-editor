@@ -1,4 +1,4 @@
-export { FormattingTools } from './FormattingTools'
-export { TextEditor } from './TextEditor'
-export { TextPreview } from './TextPreview'
-export { SendButton } from './SendButton'
+export { FormattingTools } from './blocks/FormattingTools'
+export { Preview } from './blocks/Preview'
+export { SendButton } from './blocks/SendButton'
+export { TextEditor } from './blocks/TextEditor'

@@ -11,7 +11,7 @@ class EmailService {
   }
 
   async sendEmails(text: string) {
-    const { data } = await axios.post(this.URL, {
+    const { data } = await axios.post<IEmail[]>(this.URL, {
       text
     })
     return data

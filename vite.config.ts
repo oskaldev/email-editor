@@ -14,6 +14,7 @@ export default defineConfig({
       '@utils': '/src/utils',
       '@styles': '/src/styles',
       '@providers': '/src/providers',
+      '@routes': '/src/routes',
     },
   },
   plugins: [react()],
